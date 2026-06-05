@@ -1,0 +1,18 @@
+{
+  "agentsDir": "../../agents",
+  "logsDir": "./logs",
+  "maxConcurrency": 3,
+  "defaults": {
+    "heartbeatMinutes": 60,
+    "timeoutMinutes": 30,
+    "taskTimeoutMinutes": 60,
+    "enabled": true,
+    "model": "qwen3.6:latest"
+  },
+  "agents": {
+    "ceo": {
+      "enabled": false,
+      "comment": "CEO works interactively with the human founder"
+    }
+  }
+}

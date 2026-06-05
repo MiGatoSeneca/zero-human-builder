@@ -1,0 +1,9 @@
+{
+  "defaultProvider": "ollama",
+  "defaultModel": "qwen3.6:latest",
+  "extensions": [
+    "{{PROJECT_ROOT}}/organization/shared/extensions/interactive.ts",
+    "{{PROJECT_ROOT}}/organization/shared/extensions/ollama-provider.ts"
+  ],
+  "skills": []
+}
