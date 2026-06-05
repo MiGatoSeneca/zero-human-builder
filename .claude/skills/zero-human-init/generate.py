@@ -43,7 +43,22 @@ REQUIRED = [
 ]
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES = os.path.join(os.path.dirname(HERE), "templates")
+
+
+def _find_templates(start):
+    """Walk up from `start` until we find a dir containing templates/organization."""
+    cur = start
+    while True:
+        candidate = os.path.join(cur, "templates")
+        if os.path.isdir(os.path.join(candidate, "organization")):
+            return candidate
+        parent = os.path.dirname(cur)
+        if parent == cur:  # reached filesystem root
+            return os.path.join(start, "templates")  # fallback (errors clearly later)
+        cur = parent
+
+
+TEMPLATES = _find_templates(HERE)
 
 
 def load_config(arg):

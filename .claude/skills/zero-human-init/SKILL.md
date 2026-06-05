@@ -55,7 +55,8 @@ Then derive the rest **without asking** — these are provisional drafts the fou
 Write the collected values to a temp JSON config and run the generator:
 
 ```bash
-SKILL_DIR="$HOME/Personal/zero-human-builder/zero-human-init"
+# generate.py lives next to this SKILL.md; it auto-finds templates/ by walking up.
+SKILL_DIR="$HOME/Personal/zero-human-builder/.claude/skills/zero-human-init"
 cat > /tmp/zh-init.json <<'JSON'
 {
   "target_dir": "<ABS_TARGET>",

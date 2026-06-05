@@ -27,14 +27,14 @@ It asks for the company name, what it does, the founder's name, and a few option
 
 ```
 zero-human-builder/
-├── zero-human-init/
+├── .claude/skills/zero-human-init/
 │   ├── SKILL.md         # the generator skill (asks questions, drives generation)
 │   └── generate.py      # stamps templates/ → target, substituting {{PLACEHOLDERS}}
 └── templates/
     └── organization/    # the mold: a faithful, genericized agent org
 ```
 
-The skill is symlinked into `~/.claude/skills/zero-human-init` so it's invocable from anywhere. Edit the templates here to evolve what every new startup inherits.
+The skill is **project-local**: it lives in `.claude/skills/`, so it's available when you run `claude` from this folder — nothing is installed in `~`. Edit the templates here to evolve what every new startup inherits.
 
 ## Reference
 
